@@ -5,3 +5,4 @@ It was quick and easy to make with one controller, one div, and a few logical di
 
 ![](PingPong.png =600x600)
 ![](PingPongWinner.png =600x600)
+<img src="PingPong.png" width="600" />
