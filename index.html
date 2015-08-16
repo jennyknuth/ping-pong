@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="pingPong">
+<head>
+  <meta charset="UTF-8">
+  <title>Ping Pong Score Keeper</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="angular.js" charset="utf-8"></script>
+  <script src="app.js"></script>
+</head>
+<body ng-controller="PingPong">
+  <section>
+    <h2>Ping Pong Score Keeper {{alert}}</h2>
+    <button ng-click="resetGame()">Reset</button>
+
+    <div ng-repeat="player in players" ng-click="addScore(player)" ng-mouseenter="scoreAlert()" ng-mouseleave="clear()"
+    ng-class="{box: true, blue: player.score < 11, win: player.win === true, loose: player.win === false}">
+      <h1 >{{player.player}}</h1>
+      <span class="num">{{player.score}}</span>
+      <h3 ng-hide="player.serving === false || player.win===false || player.win===true">serving</h3>
+      <h3 ng-show="player.win===true">winner!</h3>
+    </div>
+    
+  </section>
+</body>
+</html>
